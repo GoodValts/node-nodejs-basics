@@ -16,7 +16,7 @@ const calculateHash = async () => {
     
         stream.on('end', () => {
             const fileHash = hash.digest('hex');
-            console.log(fileHash);
+            console.log(`\x1b[33m${fileHash}\x1b[37m`);
             resolve();
         });
     
