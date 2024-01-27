@@ -12,9 +12,7 @@ const write = async () => {
     process.stdin.setEncoding('utf8');
 
     process.stdin.on('data', (data) => {
-        const input = data;
-
-        if (input.trim().toLowerCase() === 'close') {
+        if (data.trim().toLowerCase() === 'close') {
             stream.end();
             process.stdin.end();
         } else {
@@ -25,7 +23,7 @@ const write = async () => {
     process.on('SIGINT', () => {
         stream.end();
         console.log(`\n\x1b[34mData has been written to \x1b[33m${pathToFile}\x1b[37m`);
-        console.log('\n\x1b[31mProcess have been terminated by user\x1b[37m');
+        console.log('\n\x1b[31mProcess has been terminated by user\x1b[37m');
         process.exit();
     });
 
