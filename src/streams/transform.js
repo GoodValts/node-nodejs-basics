@@ -1,5 +1,3 @@
-import { rejects } from 'assert';
-import { resolve } from 'path';
 import { Transform } from 'stream';
 
 const transform = async () => {
