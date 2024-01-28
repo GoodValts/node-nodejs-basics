@@ -4,7 +4,7 @@ import fs from 'fs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const list = async () => {
-    const errorMessage= 'FS operation failed';
+    const errorMessage= '\x1b[31mFS operation failed\x1b[37m';
     const folderName = join(__dirname, 'files');
 
     fs.readdir(folderName, (err, files) => {

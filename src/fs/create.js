@@ -7,7 +7,7 @@ const create = async () => {
     const fileName = 'fresh.txt';
     const fileContent = 'I am fresh and young';
     const pathToFile = join(__dirname, 'files', fileName);
-    const errorMessage= 'FS operation failed';
+    const errorMessage= '\x1b[31mFS operation failed\x1b[37m';
   
     fs.access(pathToFile, (err) => {
         if (err) {

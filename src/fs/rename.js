@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const rename = async () => {
     const fileName = join(__dirname, 'files', 'wrongFilename.txt');
     const correctName = join(__dirname, 'files', 'properFilename.md');
-    const errorMessage= 'FS operation failed';
+    const errorMessage= '\x1b[31mFS operation failed\x1b[37m';
 
     fs.access(correctName, (err) => {
         if (err) {
