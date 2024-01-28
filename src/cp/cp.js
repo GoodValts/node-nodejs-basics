@@ -30,7 +30,7 @@ const spawnChildProcess = async (args) => {
 const someArgumentsArr = [];
 
 for (let i = 0; i < 5; i++) {
-    someArgumentsArr.push(`someString${i.toString()}`);
+    someArgumentsArr.push(`someString${(i + 1).toString()}`);
 }
 
 spawnChildProcess(someArgumentsArr);
